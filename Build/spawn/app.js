@@ -35,6 +35,9 @@ const progs = {
     copy: "cp",
     folder: "mkdir"
 };
+/*
+@ childprocess.spawn(command, [args], {options})
+*/
 // ls COMMAND: list files in directory
 let list = childprocess.spawn(progs.list, ["-l"], { cwd: "pdd" });
 list.stdout.on("data", (data) => {
