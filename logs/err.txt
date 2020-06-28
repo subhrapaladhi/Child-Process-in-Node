@@ -1,0 +1,6 @@
+ls: invalid option -- '@'
+Try 'ls --help' for more information.
+ls: invalid option -- '$'
+Try 'ls --help' for more information.
+ls: cannot access 'pub': No such file or directory
+ls: cannot access 'pub': No such file or directory

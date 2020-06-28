@@ -1,0 +1,27 @@
+total 125
+drwxrwxrwx 1 subhra subhra     0 Jun 28 20:51 App
+-rwxrwxrwx 1 subhra subhra  1895 Jun 28 10:39 appcopy.js
+drwxrwxrwx 1 subhra subhra  4096 Jun 28 20:51 Build
+drwxrwxrwx 1 subhra subhra     0 Jun 28 21:12 logs
+drwxrwxrwx 1 subhra subhra 20480 Jun 28 08:39 node_modules
+-rwxrwxrwx 1 subhra subhra 43568 Jun 28 11:54 out.out
+-rwxrwxrwx 1 subhra subhra   419 Jun 28 12:56 package.json
+-rwxrwxrwx 1 subhra subhra 39333 Jun 28 08:39 package-lock.json
+-rwxrwxrwx 1 subhra subhra  2222 Jun 28 12:51 readme.md
+-rwxrwxrwx 1 subhra subhra  6147 Jun 28 07:35 tsconfig.json
+total 0
+drwxrwxrwx 1 subhra subhra 0 Jun 28 11:00 exec
+drwxrwxrwx 1 subhra subhra 0 Jun 28 11:24 execfile
+drwxrwxrwx 1 subhra subhra 0 Jun 28 12:00 fork
+drwxrwxrwx 1 subhra subhra 0 Jun 28 10:58 spawn
+drwxrwxrwx 1 subhra subhra 0 Jun 28 20:51 streams
+App
+appcopy.js
+Build
+logs
+node_modules
+out.out
+package.json
+package-lock.json
+readme.md
+tsconfig.json
