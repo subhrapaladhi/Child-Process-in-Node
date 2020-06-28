@@ -23,3 +23,10 @@ The child_process.execFile() function is similar to child_process.exec() except 
 ## <u>[fork](https://nodejs.org/api/child_process.html#child_process_child_process_fork_modulepath_args_options)</u>
 ### child_process.fork(modulePath[, args][, options])
 The child_process.fork() method is a special case of child_process.spawn() used specifically to spawn new Node.js processes. Like child_process.spawn(), a ChildProcess object is returned. The returned ChildProcess will have an additional communication channel built-in that allows messages to be passed back and forth between the parent and child.
+
+## <u>[stdio option in spawn](https://nodejs.org/api/child_process.html#child_process_options_stdio)</u>
+### stdio: [stdin, stdout, stderr]
+<b>default</b>: pipe
+1. pipe: Equivalent to subprocess.(stdin/stdout/stderr). The subprocess has it's own stdin/stdout/stderr. Need to add a listener to get the data from the stdin/stdout/stderr.
+2. ignore: stdin = stdout = stderr = null. The subprocess executes and exits. No output is there.
+3. inherit: Equivalent to process.(stdin/stdout/stderr). The subprocess uses the parent's stdin/stdout/stderr. No need to add a listner as out put is directly streamed in the parent's console.
