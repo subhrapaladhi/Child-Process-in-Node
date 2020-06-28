@@ -1,7 +1,4 @@
 "use strict";
-/*
-@  childprocess.fork(modulePath, [args], {options})
-*/
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -22,9 +19,29 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/*
+@  childprocess.fork(modulePath, [args], {options})
+*/
 const childprocess = __importStar(require("child_process"));
 const names = ["subhra", "ranjan", "pranav", "mahi"];
-let child = childprocess.fork("forkchild.js", names);
+// creating fork
+let child = childprocess.fork("forkchild.js", names, { cwd: "./Build/fork/" });
+// receiving message from child
+child.on("message", (data) => {
+    console.log(`parent received ${data}`);
+});
+// ----------------------------
+// 
+// sending message to child
+let interval = setInterval(() => {
+    child.send({ name: "subhra", age: 20, city: "agra" });
+}, 1000);
+setTimeout(() => {
+    clearInterval(interval);
+    // kill child process after 5 sec
+    child.kill();
+}, 5000);
+// ----------------------------
 child.on("exit", () => {
     console.log("child terminated");
 });
